@@ -20,7 +20,7 @@ app.get('/usuario', verificaToken , (req, res) => {
     limite = Number(limite);
 
     //Con el segundo parametro del Usuario.find filtro los campos que quiero que se desplieguen
-    Usuario.find({ estado: true}, 'nombre email role estado google img')
+    Usuario.find({ estado: true }, 'nombre email role estado google img')
            .skip(desde)
            .limit(limite)
            .exec( (err, usuarios) => {
